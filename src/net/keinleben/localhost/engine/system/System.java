@@ -11,8 +11,8 @@ public class System
         implements Source{
 
     private static String mRam,cRam,fRam;
-    private static String r1 = "[FREE RAM] ", r2 = "[CURRENT USAGE] ", r3 = "[MAX RAM] ";
-    private static String consoleLine = "---------------------------------------------------------------------";
+    private static String r1 = "[free ram] ", r2 = "[used ram] ", r3 = "[max ram] ";
+    private static String consoleLine = "----------------------------------";
     private static java.lang.System s;
 
     public System(){
@@ -44,6 +44,10 @@ public class System
             java.lang.System.out.println("Free: " + fRam);
             java.lang.System.out.println("Max: " + mRam);
         }
+    }
+
+    public void compactInfo(Player player){
+        player.sendMessage(engine +  "§e" + r1 + fRam + " MB | " + r2 + cRam + " MB | " + r3 + mRam + " MB");
     }
 
     public void shuttingDown(){

@@ -16,6 +16,7 @@ public class Engine extends JavaPlugin {
         super.onEnable();
         syso.compactInfo(true);
         getCommand("shutdown").setExecutor(new Command_shutdown());
+        getCommand("info").setExecutor(new Command_shutdown());
     }
 
     @Override
