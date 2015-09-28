@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Engine:jar">
+    <output-path>C:/KeinLeben Engine/Engine/plugins</output-path>
+    <root id="archive" name="Engine.jar">
+      <element id="module-output" name="Engine" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/net/keinleben/localhost/engine/plugin.yml" />
+    </root>
+  </artifact>
+</component>

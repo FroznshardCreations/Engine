@@ -7,7 +7,7 @@ public class System {
 
     private static String mRam,cRam,fRam;
     private static String r1 = "[FREE RAM] ", r2 = "[CURRENT USAGE] ", r3 = "[MAX RAM] ";
-    private static String consoleLine = "---------------------------------------------------";
+    private static String consoleLine = "---------------------------------------------------------------------";
     private static java.lang.System s;
 
     public System(){
@@ -16,28 +16,28 @@ public class System {
         fRam = String.valueOf(Runtime.getRuntime().freeMemory() / 1024L / 1024L);
     }
 
-    public static String getFreeRam(){
+    public String getFreeRam(){
         return fRam;
     }
 
-    public static String getMaxRam(){
+    public String getMaxRam(){
         return mRam;
     }
 
-    public static String getCurrentRamUsage(){
+    public String getCurrentRamUsage(){
         return cRam;
     }
 
-    public static void compactInfo(boolean form){
+    public void compactInfo(boolean form){
         if (form){
-            s.out.println(consoleLine);
-            s.out.println(r1 + fRam + " | " + r2 + cRam + " | " +r3 + mRam);
-            s.out.println(consoleLine);
+            java.lang.System.out.println(consoleLine);
+            java.lang.System.out.println(r1 + fRam + " MB | " + r2 + cRam + " MB | " + r3 + mRam + " MB");
+            java.lang.System.out.println(consoleLine);
         }else {
-            s.out.println("Ram Notice");
-            s.out.println("Usage: " + cRam);
-            s.out.println("Free: " + fRam);
-            s.out.println("Max: " + mRam);
+            java.lang.System.out.println("Ram Notice");
+            java.lang.System.out.println("Usage: " + cRam);
+            java.lang.System.out.println("Free: " + fRam);
+            java.lang.System.out.println("Max: " + mRam);
         }
     }
 
