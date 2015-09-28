@@ -18,7 +18,7 @@ public class Command_shutdown
                              String s, String[] strings) {
         switch (command.getName()){
             case "shutdown":
-                commandSender.sendMessage("System is shutting down! Executed by you.");
+                commandSender.sendMessage("Engine is shutting down.");
                 sys.shuttingDown();
                 return true;
         }
