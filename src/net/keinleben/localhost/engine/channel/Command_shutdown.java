@@ -21,6 +21,9 @@ public class Command_shutdown
                 commandSender.sendMessage("Engine is shutting down.");
                 sys.shuttingDown();
                 return true;
+            case "test":
+                commandSender.sendMessage("§cOh this is a test... Lucky one! :D");
+                return true;
         }
         return false;
     }
