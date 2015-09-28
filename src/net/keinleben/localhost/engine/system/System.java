@@ -1,9 +1,14 @@
 package net.keinleben.localhost.engine.system;
 
+import net.keinleben.localhost.engine.source.Source;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
 /**
  * [- Author: Felix / Froznshard -]
  */
-public class System {
+public class System
+        implements Source{
 
     private static String mRam,cRam,fRam;
     private static String r1 = "[FREE RAM] ", r2 = "[CURRENT USAGE] ", r3 = "[MAX RAM] ";
@@ -39,6 +44,12 @@ public class System {
             java.lang.System.out.println("Free: " + fRam);
             java.lang.System.out.println("Max: " + mRam);
         }
+    }
+
+    public void shuttingDown(){
+        for (Player player : Bukkit.getOnlinePlayers())
+            player.kickPlayer(shuttingdown);
+        Bukkit.shutdown();
     }
 
 }

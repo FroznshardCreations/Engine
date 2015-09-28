@@ -3,3 +3,4 @@ main: net.keinleben.localhost.engine.Engine
 version: 1.0
 author: Froznshard
 commands:
+  shutdown:
